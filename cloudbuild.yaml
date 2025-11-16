@@ -1,0 +1,24 @@
+steps:
+  # Step 1: Build the container image using the Dockerfile
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/grow-taller-ai:$COMMIT_SHA', '.']
+
+  # Step 2: Push the container image to Google's Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/grow-taller-ai:$COMMIT_SHA']
+
+  # Step 3: Deploy the new container image to Google Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'grow-taller-ai' # This will be the name of your service
+      - '--image=gcr.io/$PROJECT_ID/grow-taller-ai:$COMMIT_SHA'
+      - '--region=us-central1' # This is a default region, you can change it during setup
+      - '--platform=managed'
+      - '--allow-unauthenticated' # This makes your app publicly accessible
+
+# This specifies the final image that was built, making it available for deployment.
+images:
+  - 'gcr.io/$PROJECT_ID/grow-taller-ai:$COMMIT_SHA'
