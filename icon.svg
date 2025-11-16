@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="carrot-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FDBA74;" />
+      <stop offset="100%" style="stop-color:#FB923C;" />
+    </linearGradient>
+    <linearGradient id="leaves-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#86EFAC;" />
+      <stop offset="100%" style="stop-color:#22C55E;" />
+    </linearGradient>
+  </defs>
+  <path d="M 50,30 C 30,50 30,95 50,95 C 70,95 70,50 50,30 Z" fill="url(#carrot-gradient)" />
+  <path d="M 50 35 C 40 20, 30 10, 45 10 C 50 20, 50 25, 50 35 Z" fill="url(#leaves-gradient)" />
+  <path d="M 50 35 C 60 20, 70 10, 55 10 C 50 20, 50 25, 50 35 Z" fill="url(#leaves-gradient)" />
+</svg>

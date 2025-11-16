@@ -1,0 +1,7 @@
+{
+  "name": "Grow Taller with AI",
+  "description": "A fun app for kids to learn about healthy eating for growth. Snap a photo of your meal and get instant, friendly advice from our AI nutritionist!",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
