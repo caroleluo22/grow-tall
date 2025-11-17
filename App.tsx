@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { GoogleGenAI, Type } from "@google/genai";
 import type { AnalysisResult } from './types';
-import { CameraIcon, ThumbsUpIcon, ThumbsDownIcon, SparklesIcon } from './components/IconComponents';
+import { CameraIcon, ThumbsUpIcon, ThumbsDownIcon, SparklesIcon } from './components/IconComponents.tsx';
 
 type AppState = 'initial' | 'camera' | 'loading' | 'result' | 'error';
 
